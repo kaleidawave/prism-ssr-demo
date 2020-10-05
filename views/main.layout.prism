@@ -1,0 +1,38 @@
+<template>
+    <header>
+        <h1>
+            <svg viewBox="-30 -30 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="black" stroke-width="20px" stroke-linejoin="round">
+                <path d="M 45.7,125 38.1,7.94 M 7.94,117 45.7,125 128,96.6 38.1,7.94 Z"></path>
+            </svg>
+            <span>
+                Prism SSR Demo
+            </span>
+        </h1>
+        <nav>
+            <ul>
+                <li><a relative href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <slot></slot>
+    </main>
+</template>
+
+<script>
+    @Layout
+    export class MainLayout extends Component {
+
+    }
+</script>
+
+<style>
+    header > h1 {
+        display: flex;
+        align-items: center;
+
+        svg {
+            height: 48px;
+        }
+    }
+</style>

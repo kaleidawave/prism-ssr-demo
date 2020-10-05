@@ -1,0 +1,20 @@
+{
+  "name": "prism-ssr-demo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Example of Prism",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "build": "node node_modules/@kaleidawave/prism/out compile-app",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "kaleidawave",
+  "license": "MIT",
+  "devDependencies": {
+    "@kaleidawave/prism": "^1.0.1"
+  }
+}

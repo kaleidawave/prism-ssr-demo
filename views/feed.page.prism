@@ -1,0 +1,31 @@
+<template>
+    <ul #for="const post of posts">
+        <li>
+            <PostComponent $data="post"></PostComponent>
+        </li>
+    </ul>
+</template>
+
+<script>
+    import {PostComponent, IPost} from "./post.component.prism";
+    import {MainLayout} from "./main.layout.prism";
+
+    @UseLayout(MainLayout)
+    @Page("/")
+    class FeedPage extends Component<{posts: Array<IPost>}> {
+        async load() {
+            if (this.isConnected) {
+                return;
+            }
+            const response = await fetch("/api/feed");
+            this.data.posts = await response.json();
+        }
+    }
+</script>
+
+<style>
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
+</style>

@@ -1,0 +1,24 @@
+<template>
+    <h1>Post:</h1>
+    <PostComponent $data="post"></PostComponent>
+</template>
+
+<script>
+    import {PostComponent, IPost} from "./post.component.prism";
+    import {MainLayout} from "./main.layout.prism";
+
+    @UseLayout(MainLayout)
+    @Page("/post/:postID")
+    class PostPage extends Component<{post: IPost}> {
+        async load({postID}) {
+            const response = await fetch(`/api/posts/${postID}`);
+            this.data.post = await response.json();
+        }
+    }
+</script>
+
+<style>
+    .view-post {
+        display: none;
+    }
+</style>

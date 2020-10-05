@@ -1,0 +1,7 @@
+{
+    "projectPath": "views",
+    "serverOutputPath": "ssr-templates",
+    "assetPath": "assets",
+    "outputPath": "public",
+    "context": "isomorphic"
+}
