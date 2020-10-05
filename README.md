@@ -1,5 +1,7 @@
 # Prism SSR Express app
 
+[![Run on Repl.it](https://repl.it/badge/github/kaleidawave/prism-ssr-demo)](https://repl.it/github/kaleidawave/prism-ssr-demo)
+
 This is a example of using the [Prism compiler](https://github.com/kaleidawave/prism) to build a fullstack application.
 
 ### To run

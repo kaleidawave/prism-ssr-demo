@@ -25,6 +25,7 @@
     & {
         display: block;
         padding: 12px;
-        border: 12px solid #1b2df2;
+        border: 6px solid #1b2df2;
+        margin-bottom: 6px;
     }
 </style>
