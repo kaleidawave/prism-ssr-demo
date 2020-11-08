@@ -1,8 +1,7 @@
-const express = require("express");
-const app = express();
-
 const {renderFeedPagePage} = require("./ssr-templates/feed.page.prism");
 const {renderPostPagePage} = require("./ssr-templates/post.page.prism");
+const express = require("express");
+const app = express();
 
 app.use(express.static("public"));
 
@@ -13,6 +12,7 @@ const posts = [
     {id: "post4", title: "post4", description: "Lorem Ipsum", upvotes: 5332},
     {id: "post5", title: "post5", description: "Lorem Ipsum", upvotes: 2342},
 ];
+
 const postMap = new Map(posts.map(post => [post.id, post]))
 
 app.get("/", (_, res) => {
